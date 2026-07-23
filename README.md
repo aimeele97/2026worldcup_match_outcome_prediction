@@ -46,23 +46,47 @@ The analysis is structured sequentially across the following core milestones:
 
 ---
 
-## 🔮 Simulation Results
-By parsing active tournament group data and deploying the trained model engine across all stages, the Monte Carlo simulation generated the following final title probabilities for the tournament's top contenders:
+## 🔮 Model Ouput
 
-| Seed | Team | Championship Probability |
-| :---: | :--- | :---: |
-| 🥇 1st | **Spain** | **13.80%** |
-| 🥈 2nd | **France** | **13.79%** |
-| 🥉 3rd | **Brazil** | **13.44%** |
-| 4th | **Morocco** | **13.25%** |
+### Classification model output (XGB)
 
-The simulation demonstrates a razor-thin margin separating top co-favorites Spain and France, perfectly mirroring real-world tactical depth, pressing mechanics, and pre-tournament roster projections.
+![Ouput](modeloutput.png)
+
+### Monte Carlo simulation result
+With 100,000 simulated tournaments, the Law of Large Numbers ensures these probability estimates have converged and aren't just sampling noise. Spain comes out on top with a 13.0% championship probability, narrowly ahead of Brazil (12.6%), Portugal (12.5%), and Argentina (12.4%). The tight clustering across the top four suggests no clear favorite for the 2026 tournament.
+
+![MonteCarloresult](MCoutput.png). 
 
 ---
   
 ## Tactical Analysis of the Finalists
-* **Spain's Path to Victory:** The model highly favored Spain's elite ball-retention metrics and consistent positive goal differential over the past 4-year cycle. Their razor-thin semi-final edge over France (51%) was their toughest hurdle before locking down the final.
-* **Morocco's Historic Run:** Entering the knockouts with a 13.25% tournament-wide metric, Morocco pull off major model upsets by eliminating Switzerland (60%), and subsequently taking down South American giants Brazil (56%) in a massive semi-final clash.
+
+### Spain
+Across the Monte Carlo simulation (100,000 trials), Spain recorded the highest championship probability at 13.0%. In the XGBoost bracket prediction, Spain's path to the final shows a pattern of **narrow win margins at every stage**:
+- R32: Spain 63% vs. Austria 37%
+- R16: Spain 51% vs. Colombia 49%
+- QF: Spain 57% vs. Belgium 43%
+- Final: Spain 55% vs. Argentina 45%
+
+The consistency of close-but-favorable margins (all between 51–63%) suggests the model views Spain as a **stable favorite in every round**, without ever facing a match where it is the underdog. Spain is the only finalist projected to hold a probability edge in all four knockout rounds.
+
+### Argentina
+Argentina also ranks in the Monte Carlo top four at 12.4% championship probability, close behind Spain, Brazil, and Portugal. In the XGBoost bracket, Argentina's path shows a **tighter and more variable set of margins**:
+- R32: Argentina 69% vs. Uruguay 31%
+- R16: Argentina 61% vs. Turkey 39%
+- QF: Argentina 52% vs. Portugal 48%
+- SF: Argentina 58% vs. Brazil 42%
+- Final: Argentina 45% vs. Spain 55%
+
+Argentina's margins start strong (69%, 61%) but compress significantly by the QF and SF (52%, 58%), and the model finally favors Spain over Argentina in the final. This suggests the model sees Argentina's path as **progressively harder**, culminating in the final as the only match where Argentina is the underdog.
+
+### Model Agreement
+Both models point to the same two teams as the top contenders:
+- **Monte Carlo**: Spain (13.0%) and Argentina (12.4%) both place in the top four, separated by only 0.6 percentage points.
+- **XGBoost**: Spain and Argentina are the two teams that reach the final, with the model favoring Spain by a 10-point margin (55% vs. 45%).
+
+### Conclusion
+Both models converge on **Spain as the marginal favorite and Argentina as the closest challenger**, but arrive at this conclusion through different lenses: Monte Carlo shows this as a near-even probability across the full distribution of outcomes (13.0% vs. 12.4%), while XGBoost shows it as a single deterministic path where Spain wins every round including a close final. The consistency of Spain's win margins across all rounds in the XGBoost model, paired with its top Monte Carlo probability, provides convergent though not conclusive, evidence that Spain holds a slight structural edge over Argentina in this year's tournament projection.
 
 ---
 
