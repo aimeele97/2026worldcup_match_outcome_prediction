@@ -1,0 +1,84 @@
+Match,Bet,Model %,Bookie %,Edge,Odds,Stake ($),If Win (+$),If Lose (-$)
+Germany vs Curaçao,Away,28.3%,2.3%,+1060.7%,41.0,50.0,2000.0,-50.0
+Spain vs Cape Verde,Away,30.2%,3.6%,+684.5%,26.0,50.0,1250.0,-50.0
+Spain vs Saudi Arabia,Away,26.5%,3.7%,+587.7%,26.0,50.0,1250.0,-50.0
+France vs Iraq,Away,28.0%,4.1%,+544.3%,23.0,50.0,1100.0,-50.0
+Brazil vs Haiti,Away,27.8%,4.5%,+484.2%,21.0,50.0,1000.0,-50.0
+Iraq vs Norway,Home,35.5%,6.7%,+396.6%,14.0,50.0,650.0,-50.0
+Qatar vs Switzerland,Home,32.3%,6.3%,+385.0%,15.0,50.0,700.0,-50.0
+Jordan vs Argentina,Home,24.1%,6.2%,+261.8%,15.0,46.75,654.5,-46.75
+Canada vs Qatar,Away,29.9%,7.9%,+258.2%,12.0,50.0,550.0,-50.0
+Curaçao vs Ivory Coast,Home,24.4%,6.8%,+241.4%,14.0,46.43,603.59,-46.43
+Portugal vs DR Congo,Away,30.2%,8.5%,+232.7%,11.0,50.0,500.0,-50.0
+Ecuador vs Curaçao,Away,24.9%,7.2%,+224.1%,13.0,46.68,560.16,-46.68
+Panama vs England,Home,30.1%,9.4%,+201.5%,10.0,50.0,450.0,-50.0
+Portugal vs Uzbekistan,Away,26.8%,8.6%,+195.1%,11.0,48.77,487.7,-48.77
+Austria vs Jordan,Away,30.1%,10.0%,+185.9%,9.5,50.0,425.0,-50.0
+Argentina vs Algeria,Away,31.2%,10.4%,+180.9%,9.0,50.0,400.0,-50.0
+Uzbekistan vs Colombia,Home,28.9%,9.9%,+174.7%,9.5,50.0,425.0,-50.0
+New Zealand vs Belgium,Home,23.1%,8.5%,+153.9%,11.0,38.47,384.7,-38.47
+Belgium vs Iran,Away,30.4%,11.5%,+143.3%,8.0,50.0,350.0,-50.0
+Senegal vs Iraq,Away,28.7%,11.8%,+129.4%,8.0,46.21,323.47,-46.21
+France vs Senegal,Away,29.6%,12.6%,+121.7%,7.5,46.81,304.26,-46.81
+Morocco vs Haiti,Away,23.0%,10.0%,+118.5%,9.5,34.85,296.23,-34.85
+Colombia vs DR Congo,Away,28.7%,12.6%,+115.3%,7.5,44.35,288.28,-44.35
+Scotland vs Brazil,Home,28.0%,12.5%,+110.3%,7.5,42.42,275.73,-42.42
+Ghana vs Panama,Away,61.0%,27.6%,+107.4%,3.4,50.0,120.0,-50.0
+England vs Ghana,Away,22.2%,10.5%,+100.0%,9.0,31.24,249.92,-31.24
+Uruguay vs Cape Verde,Away,24.8%,11.7%,+98.3%,8.0,35.12,245.84,-35.12
+Germany vs Ivory Coast,Away,32.6%,15.7%,+95.9%,6.0,47.94,239.7,-47.94
+Saudi Arabia vs Uruguay,Home,24.7%,12.4%,+85.5%,7.5,32.89,213.78,-32.89
+Tunisia vs Netherlands,Home,27.9%,14.3%,+81.1%,6.5,36.88,202.84,-36.88
+Panama vs Croatia,Home,27.4%,14.5%,+78.1%,6.5,35.52,195.36,-35.52
+Brazil vs Morocco,Away,32.3%,17.1%,+77.5%,5.5,43.04,193.68,-43.04
+Jordan vs Algeria,Home,26.0%,14.5%,+69.0%,6.5,31.37,172.53,-31.37
+South Africa vs South Korea,Home,27.6%,15.8%,+65.3%,6.0,32.67,163.35,-32.67
+South Africa vs South Korea,Home,27.6%,15.8%,+65.3%,6.0,32.67,163.35,-32.67
+Belgium vs Egypt,Away,28.6%,17.2%,+57.2%,5.5,31.8,143.1,-31.8
+Haiti vs Scotland,Home,28.5%,17.1%,+56.7%,5.5,31.48,141.66,-31.48
+Australia vs Türkiye,Home,28.4%,17.3%,+56.1%,5.5,31.16,140.22,-31.16
+USA vs Australia,Away,30.5%,18.6%,+52.5%,5.0,32.83,131.32,-32.83
+Argentina vs Austria,Away,27.6%,17.1%,+51.6%,5.5,28.66,128.97,-28.66
+Uruguay vs Spain,Home,29.6%,18.6%,+47.9%,5.0,29.91,119.64,-29.91
+Czechia vs South Africa,Away,29.6%,18.8%,+47.9%,5.0,29.91,119.64,-29.91
+Czechia vs South Africa,Away,29.6%,18.8%,+47.9%,5.0,29.91,119.64,-29.91
+England vs Croatia,Away,29.1%,19.0%,+45.6%,5.0,28.48,113.92,-28.48
+Ivory Coast vs Ecuador,Away,56.0%,38.6%,+37.2%,2.45,50.0,72.5,-50.0
+Japan vs Sweden,Home,63.0%,46.4%,+29.1%,2.05,50.0,52.5,-50.0
+Bosnia and Herzegovina vs Qatar,Draw,33.0%,23.8%,+28.7%,3.9,24.74,71.75,-24.74
+Netherlands vs Sweden,Away,25.2%,18.8%,+26.2%,5.0,16.34,65.36,-16.34
+Switzerland vs Bosnia and Herzegovina,Away,22.9%,17.0%,+26.1%,5.5,14.49,65.2,-14.49
+Sweden vs Tunisia,Away,29.0%,21.7%,+25.6%,4.33,19.24,64.07,-19.24
+Ecuador vs Germany,Draw,33.0%,24.7%,+25.4%,3.8,22.68,63.5,-22.68
+Iran vs New Zealand,Home,69.0%,52.1%,+24.2%,1.8,50.0,40.0,-50.0
+Türkiye vs Paraguay,Home,55.0%,42.8%,+21.0%,2.2,43.75,52.5,-43.75
+Mexico vs South Korea,Home,59.0%,47.5%,+18.0%,2.0,45.0,45.0,-45.0
+Mexico vs South Korea,Home,59.0%,47.5%,+18.0%,2.0,45.0,45.0,-45.0
+Tunisia vs Japan,Home,23.6%,18.6%,+17.9%,5.0,11.21,44.84,-11.21
+New Zealand vs Egypt,Away,68.0%,54.9%,+17.0%,1.72,50.0,36.0,-50.0
+Netherlands vs Japan,Draw,33.0%,26.8%,+15.5%,3.5,15.5,38.75,-15.5
+Türkiye vs USA,Draw,33.0%,27.1%,+15.5%,3.5,15.5,38.75,-15.5
+Croatia vs Ghana,Home,71.0%,58.3%,+14.3%,1.61,50.0,30.5,-50.0
+Switzerland vs Canada,Home,54.0%,45.4%,+13.4%,2.1,30.45,33.5,-30.45
+Norway vs France,Home,25.5%,21.6%,+12.4%,4.4,9.08,30.87,-9.08
+Cape Verde vs Saudi Arabia,Draw,33.0%,27.8%,+12.2%,3.4,12.71,30.5,-12.71
+Norway vs Senegal,Draw,33.0%,27.8%,+12.2%,3.4,12.71,30.5,-12.71
+Colombia vs Portugal,Draw,33.0%,27.9%,+12.2%,3.4,12.71,30.5,-12.71
+Scotland vs Morocco,Away,59.0%,49.3%,+12.1%,1.9,33.61,30.25,-33.61
+Canada vs Bosnia and Herzegovina,Home,61.0%,51.7%,+11.6%,1.83,35.03,29.07,-35.03
+Czechia vs Mexico,Away,62.0%,52.5%,+11.6%,1.8,36.25,29.0,-36.25
+Czechia vs Mexico,Away,62.0%,52.5%,+11.6%,1.8,36.25,29.0,-36.25
+Canada vs Bosnia and Herzegovina,Away,24.0%,20.5%,+10.3%,4.6,7.17,25.81,-7.17
+Czechia vs Mexico,Home,24.0%,20.5%,+10.2%,4.6,7.07,25.45,-7.07
+Czechia vs Mexico,Home,24.0%,20.5%,+10.2%,4.6,7.07,25.45,-7.07
+Norway vs France,Away,61.0%,52.8%,+9.8%,1.8,30.62,24.5,-30.62
+Paraguay vs Australia,Draw,33.0%,28.7%,+8.9%,3.3,9.67,22.24,-9.67
+Algeria vs Austria,Draw,33.0%,28.8%,+8.9%,3.3,9.67,22.24,-9.67
+USA vs Paraguay,Draw,33.0%,28.9%,+7.2%,3.25,8.06,18.14,-8.06
+Croatia vs Ghana,Away,19.5%,17.1%,+7.2%,5.5,4.01,18.04,-4.01
+Tunisia vs Japan,Away,63.0%,54.8%,+7.1%,1.7,25.36,17.75,-25.36
+DR Congo vs Uzbekistan,Draw,33.0%,29.5%,+5.6%,3.2,6.36,13.99,-6.36
+Switzerland vs Bosnia and Herzegovina,Home,67.0%,59.6%,+5.2%,1.57,22.76,12.97,-22.76
+Netherlands vs Sweden,Home,63.0%,57.0%,+4.0%,1.65,15.19,9.87,-15.19
+Scotland vs Morocco,Home,24.7%,22.3%,+3.9%,4.2,3.07,9.82,-3.07
+New Zealand vs Egypt,Home,20.6%,18.9%,+3.1%,5.0,1.95,7.8,-1.95
