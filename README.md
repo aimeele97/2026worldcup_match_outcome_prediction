@@ -56,10 +56,8 @@ The analysis is structured sequentially across the following core milestones:
 With 100,000 simulated tournaments, the Law of Large Numbers ensures these probability estimates have converged and aren't just sampling noise. Spain comes out on top with a 13.0% championship probability, narrowly ahead of Brazil (12.6%), Portugal (12.5%), and Argentina (12.4%). The tight clustering across the top four suggests no clear favorite for the 2026 tournament.
 
 ![MonteCarloresult](MCoutput.png). 
-
----
   
-## Tactical Analysis of the Finalists
+## Model-Based Confidence Analysis of the Finalists
 
 ### Spain
 Across the Monte Carlo simulation (100,000 trials), Spain recorded the highest championship probability at 13.0%. In the XGBoost bracket prediction, Spain's path to the final shows a pattern of **narrow win margins at every stage**:
