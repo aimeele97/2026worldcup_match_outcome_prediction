@@ -116,5 +116,5 @@ Advanced Player-Level Analytics (Expected Goals & Form).
 ## 🛠️ Tech Stack & Infrastructure
 * **Data Manipulation & Math:** `pandas`, `numpy`
 * **Machine Learning:** `scikit-learn`, `xgboost`, `gradientboosting`, `randomforest`
+* **Simulation & Statistical Methods:** `Monte Carlo simulation`, `GridSearchCV`
 * **Visualization:** `matplotlib`, `seaborn`
-* **Optimization:** `GridSearchCV`, `logloss`
