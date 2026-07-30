@@ -1,12 +1,19 @@
-# FIFA World Cup 2026 Prediction Pipeline & Monte Carlo Simulation
+<div align="center">
+
+# ⚽ Sports Analytics Project
+## FIFA World Cup 2026 Prediction Pipeline & Monte Carlo Simulation
+
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-AUC%200.76-228B22?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-blue?style=for-the-badge)
+
+</div>
+
+## Summary
 
 An end-to-end data science and machine learning project designed to forecast match outcomes and simulate tournament variations for the expanded **2026 FIFA World Cup**, tracking progression from the group stages to the final match.
 
 This project leverages historical international football data, Elo rating formulas, and an optimized **XGBoost Classifier (AUC ~ 0.76)**, combined with a **Monte Carlo Simulation** to project full knockout bracket trajectories and overall winning probabilities.
-
-## Key Achievements
-* **Top 4 / Semifinalists Correctly Identified:** Successfully predicted all 4 Semifinalists—**Spain, Argentina, France, and England**—as the top contenders with the highest championship probabilities in the Monte Carlo simulation.
-* **Top 3 Championship Accuracy:** The simulation accurately identified the exact top 3 podium contenders: **Spain (1st - 21.60%)**, **Argentina (2nd - 21.10%)**, and **France (3rd - 18.50%)**.
 
 ## Project Overview
 
@@ -17,9 +24,12 @@ This project frames the FIFA World Cup prediction as a multi-stage data science 
 2. **Knockout Stage Progression:** Simulating match transitions across the Round of 32 (R32), Round of 16 (R16), Quarterfinals (QF), Semifinals (SF), and Final.
 3. **Tournament Simulation:** Running Monte Carlo simulations to estimate overall championship probabilities across hundreds of iterations.
 
+## Key Achievements
+* **Top 4 / Semifinalists Correctly Identified:** Successfully predicted all 4 Semifinalists—**Spain, Argentina, France, and England**—as the top contenders with the highest championship probabilities in the Monte Carlo simulation.
+* **Top 3 Championship Accuracy:** The simulation accurately identified the exact top 3 podium contenders: **Spain (1st - 21.60%)**, **Argentina (2nd - 21.10%)**, and **France (3rd - 18.50%)**.
+
 
 ## The 48-Team Tournament Structure
-
 The expanded tournament format significantly alters traditional progression brackets:
 * **The Group Stage (72 Matches):** Teams are split into 12 groups (Groups A through L) of 4 teams each.
 * **The Wildcard Tiebreaker:** To form a clean single-elimination bracket, the tournament selects the top 2 teams from each of the 12 groups (24 teams) plus the 8 best third-place teams across the entire tournament based on points, goal differentials, and goals scored.
@@ -102,11 +112,11 @@ Both the Monte Carlo simulation and XGBoost bracket predictions converge on the 
 
 ## Challenges & Limitations
 
-### Challenges
+### 1. Challenges
 * **Data Harmonization over Modeling:** The main challenge lay in data preparation rather than algorithm design—cleaning inconsistent data formats, normalizing country naming variations, and resolving historical ranking gaps.
 * **Manual Knockout Hardcoding:** Automating dynamic bracket progression for the expanded 48-team layout presented challenges due to non-standard third-place qualification paths, requiring manual coding for match assignments across knockout rounds.
 
-### Limitations
+### 2. Limitations
 * **Static Ranking Assumption (2024–2026):** Granular, active tracking updates for 2024–2026 were unavailable programmatically; thus, static baseline rankings from June 2024 were held constant for intermediate fixtures prior to applying pre-tournament metrics.
 * **Best Third-Place Rule ("Enzy Table"):** The complex 48-team best 3rd-place team lookup combination matrix was not dynamically simulated within the notebook loop. Instead, third-place advancing teams were mapped manually based on highest projected quality from available group draw assignments.
 * **Binary Outcome vs. Penalty Shootouts:** The model is evaluated as a binary classifier ($0$ or $1$) representing regular/extra time outcomes, inherently missing the non-deterministic psychological factors of penalty shootouts.
