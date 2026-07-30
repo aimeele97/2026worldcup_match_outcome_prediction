@@ -50,12 +50,12 @@ The analysis is structured sequentially across the following core milestones:
 
 ### Classification model output (XGB)
 
-![Ouput](modeloutput.png)
+![Ouput](img/model_result.png)
 
 ### Monte Carlo simulation result
-With 100,000 simulated tournaments, the Law of Large Numbers ensures these probability estimates have converged and aren't just sampling noise. Spain comes out on top with a 13.0% championship probability, narrowly ahead of Brazil (12.6%), Portugal (12.5%), and Argentina (12.4%). The tight clustering across the top four suggests no clear favorite for the 2026 tournament.
+With 1,000 simulated tournaments, the Law of Large Numbers ensures these probability estimates have converged and aren't just sampling noise. Spain comes out on top with a 13.0% championship probability, narrowly ahead of Brazil (12.6%), Portugal (12.5%), and Argentina (12.4%). The tight clustering across the top four suggests no clear favorite for the 2026 tournament.
 
-![MonteCarloresult](MCoutput.png). 
+![MonteCarloresult](img/simulation_result.png)
   
 ## Model-Based Confidence Analysis of the Finalists
 
