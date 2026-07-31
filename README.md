@@ -17,11 +17,11 @@ This project predicts match outcomes for the 2026 FIFA World Cup using machine l
 
 The FIFA World Cup is the premier global football competition held every four years. The 2026 edition introduces a historic format expansion, increasing the field to 48 qualified nations competing across three host countries (Mexico, Canada, and the United States).
 
-The project consists of three stages:
-
-1. Train a machine learning model to predict the probability of one team beating another.
-2. Use those probabilities to predict the knockout bracket.
-3. Run Monte Carlo simulations to estimate each team's probability of becoming world champion.
+This project leverages machine learning and statistical modeling to simulate the FIFA World Cup and predict tournament outcomes. The pipeline is structured into four main phases:
+- **Data Pipeline:** Data collection, data cleaning, target setting, and feature engineering.
+- **Model Development:** Training predictive classification models to estimate match-level outcomes.
+- **Tournament Logic:** Simulating full World Cup tournament structures (Group Stage through Finals).
+- **Monte Carlo Engine:** Running thousands of stochastic simulations to map out team win probabilities and expected performance distributions.
 
 ## Key Achievements
 
