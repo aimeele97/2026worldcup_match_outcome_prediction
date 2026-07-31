@@ -73,19 +73,9 @@ $$E_A = \frac{1}{1 + 10^{(R_B - R_A)/400}}$$
 ## Model Outputs & Results
 
 ### 1. Monte Carlo Simulation (Championship Probabilities)
-![MonteCarloresult](img/simulation_result.png)
-Running Monte Carlo simulations across full tournament runs produces converged probability estimates for the ultimate 2026 World Cup Champion:
+![MonteCarloresult](img/monte_result.png)
 
-| Rank | Country | Championship Probability | Knockout Status |
-| :---: | :--- | :---: | :---: |
-| 1 | **Spain** | **21.60%** | Champion 🏆 |
-| 2 | **Argentina** | **21.10%** | Finalist / Runner-up |
-| 2 | **France** | **18.50%** | Semifinalist |
-| 4 | **England** | **15.80%** | Semifinalist |
-| 5 | Brazil | 7.30% | Quarterfinalist |
-| 6 | Portugal | 6.50% | Quarterfinalist |
-| 7 | Belgium | 4.70% | Quarterfinalist |
-| 8 | Morocco | 4.50% | Quarterfinalist |
+The Monte Carlo simulation demonstrates that the estimated championship probabilities become more stable as the number of simulations increases. With 1,000 simulations, Spain emerged as the most likely champion (21.60%), narrowly ahead of Argentina (21.10%). However, after increasing the simulation to 100,000 trials, Argentina became the slight favourite (21.52%), with Spain close behind (21.40%). The difference between the two teams is only 0.12 percentage points, indicating that they are virtually evenly matched. This small change illustrates the stochastic nature of Monte Carlo simulations, where increasing the number of trials reduces sampling variability and produces more reliable, converged probability estimates. Despite the change in ranking, both simulations consistently identify Argentina and Spain as the leading title contenders, followed by France and England.
 
 ### 2. Single-Path Knockout Bracket Prediction (XGBoost)
 ![Ouput](img/model_result.png)
