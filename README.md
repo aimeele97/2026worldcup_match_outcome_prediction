@@ -11,22 +11,24 @@
 
 ## Summary
 
-An end-to-end data science and machine learning project designed to forecast match outcomes and simulate tournament variations for the expanded **2026 FIFA World Cup**, tracking progression from the group stages to the final match.
-
-This project leverages historical international football data, Elo rating formulas, and an optimized **XGBoost Classifier (AUC ~ 0.76)**, combined with a **Monte Carlo Simulation** to project full knockout bracket trajectories and overall winning probabilities.
+This project predicts match outcomes for the 2026 FIFA World Cup using machine learning and estimates each team's chance of winning the tournament through Monte Carlo simulation. Historical international match results, FIFA ranking points, and engineered team performance features were used to train an XGBoost classifier (ROC-AUC ≈ 0.76) before simulating the knockout stage thousands of times.
 
 ## Project Overview
 
 The FIFA World Cup is the premier global football competition held every four years. The 2026 edition introduces a historic format expansion, increasing the field to 48 qualified nations competing across three host countries (Mexico, Canada, and the United States).
 
-This project frames the FIFA World Cup prediction as a multi-stage data science problem:
-1. **Match-Level Probability Modeling:** Predicting individual head-to-head encounters using historical features, recent team form, and Elo rating metrics.
-2. **Knockout Stage Progression:** Simulating match transitions across the Round of 32 (R32), Round of 16 (R16), Quarterfinals (QF), Semifinals (SF), and Final.
-3. **Tournament Simulation:** Running Monte Carlo simulations to estimate overall championship probabilities across hundreds of iterations.
+The project consists of three stages:
+
+1. Train a machine learning model to predict the probability of one team beating another.
+2. Use those probabilities to predict the knockout bracket.
+3. Run Monte Carlo simulations to estimate each team's probability of becoming world champion.
 
 ## Key Achievements
-* **Top 4 / Semifinalists Correctly Identified:** Successfully predicted all 4 Semifinalists—**Spain, Argentina, France, and England**—as the top contenders with the highest championship probabilities in the Monte Carlo simulation.
-* **Top 3 Championship Accuracy:** The simulation accurately identified the exact top 3 podium contenders: **Spain (1st - 21.60%)**, **Argentina (2nd - 21.10%)**, and **France (3rd - 18.50%)**.
+
+- XGBoost achieved a ROC-AUC of approximately **0.76**.
+- The model predicted a final between **Spain and Argentina**.
+- Monte Carlo simulation consistently identified **Argentina, Spain, France, and England** as the strongest title contenders.
+- Increasing the simulation from **1,000** to **100,000** iterations produced stable championship probability estimates.
 
 
 ## The 48-Team Tournament Structure
@@ -39,7 +41,8 @@ $$\text{Round of 32} \longrightarrow \text{Round of 16} \longrightarrow \text{Qu
 
 ## Data Sources & Collection
 
-The modeling pipeline integrates three public datasets sourced from Kaggle alongside domain-specific rating algorithms:
+The project uses three datasets which were collected from Kaggle:
+
 * **Historical Match Results (`results.csv`):** Historical international fixture logs containing match dates, teams, tournament tiers, neutral ground indicators, and final scores.
 * **Historical FIFA Rankings (`fifa_ranking-2024-06-20.csv`):** Official tracking of team points and continental configurations up to June 20, 2024.
 * **Pre-Tournament FIFA Rankings (`fifa_ranking_2026-06-08.csv`):** Baseline power matrices representing international standings right before tournament kickoff.
@@ -62,20 +65,19 @@ $$E_A = \frac{1}{1 + 10^{(R_B - R_A)/400}}$$
 *Where $R_A$ and $R_B$ represent the current numeric ratings of Team A and Team B, respectively.*
 
 ### 3. Model Training & Hyperparameter Tuning
-* **Candidate Architectures:** GridSearchCV with cross-validation was implemented across multiple classification models: Logistic Regression, Random Forest, Gradient Boosting, and XGBoost.
+* **Candidate Architectures:** GridSearchCV with cross-validation was implemented across three classification models: Random Forest, Gradient Boosting, and XGBoost.
 * **Early Stopping Optimization:** To combat overfitting, early stopping criteria (`early_stopping_rounds=20`) tracking Area Under the ROC Curve (`eval_metric="auc"`) were integrated into the training loop, capturing the peak generalized state of the model.
 
 ## Model Evaluation & Selection
 
-* **Top Architecture:** **XGBoost Classifier** outperformed alternative architectures, achieving a final validation score of **ROC-AUC $\approx 0.76$**.
-* **Regularization Success:** While candidate models yielded comparable raw validation scores, XGBoost demonstrated superior generalization with significantly lower overfitting on historical evaluation sets.
+- **XGBoost Classifie**r was selected for final deployment. While all evaluated models yielded very similar performance, XGBoost demonstrated slightly better generalization and resistance to overfitting, achieving a final validation score of ROC-AUC $\approx 0.76$.
 
 ## Model Outputs & Results
 
 ### 1. Monte Carlo Simulation (Championship Probabilities)
 ![MonteCarloresult](img/monte_result.png)
 
-The Monte Carlo simulation demonstrates that the estimated championship probabilities become more stable as the number of simulations increases. With 1,000 simulations, Spain emerged as the most likely champion (21.60%), narrowly ahead of Argentina (21.10%). However, after increasing the simulation to 100,000 trials, Argentina became the slight favourite (21.52%), with Spain close behind (21.40%). The difference between the two teams is only 0.12 percentage points, indicating that they are virtually evenly matched. This small change illustrates the stochastic nature of Monte Carlo simulations, where increasing the number of trials reduces sampling variability and produces more reliable, converged probability estimates. Despite the change in ranking, both simulations consistently identify Argentina and Spain as the leading title contenders, followed by France and England.
+The tournament was simulated using Monte Carlo methods to estimate each team's probability of winning the World Cup. With 1,000 simulations, Spain had the highest estimated championship probability (21.60%), narrowly ahead of Argentina (21.10%). After increasing the simulation to 100,000 iterations, Argentina became the slight favourite (21.52%), with Spain close behind (21.40%). The difference between the two teams was only 0.12 percentage points, indicating that they are effectively evenly matched. The larger simulation produced more stable estimates while consistently identifying Argentina, Spain, France, and England as the tournament's strongest contenders.
 
 ### 2. Single-Path Knockout Bracket Prediction (XGBoost)
 ![Ouput](img/model_result.png)
@@ -103,7 +105,7 @@ Both the Monte Carlo simulation and XGBoost bracket predictions converge on the 
 ## Challenges & Limitations
 
 ### 1. Challenges
-* **Data Harmonization over Modeling:** The main challenge lay in data preparation rather than algorithm design—cleaning inconsistent data formats, normalizing country naming variations, and resolving historical ranking gaps.
+* **Data Harmonization over Modeling:** The main challenge lay in data preparation rather than algorithm design and cleaning inconsistent data formats, normalizing country naming variations, and resolving historical ranking gaps.
 * **Manual Knockout Hardcoding:** Automating dynamic bracket progression for the expanded 48-team layout presented challenges due to non-standard third-place qualification paths, requiring manual coding for match assignments across knockout rounds.
 
 ### 2. Limitations
