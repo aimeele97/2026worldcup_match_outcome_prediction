@@ -72,14 +72,7 @@ $$E_A = \frac{1}{1 + 10^{(R_B - R_A)/400}}$$
 
 - **XGBoost Classifie**r was selected for final deployment. While all evaluated models yielded very similar performance, XGBoost demonstrated slightly better generalization and resistance to overfitting, achieving a final validation score of ROC-AUC $\approx 0.76$.
 
-## Model Outputs & Results
-
-### 1. Monte Carlo Simulation (Championship Probabilities)
-![MonteCarloresult](img/monte_result.png)
-
-The tournament was simulated using Monte Carlo methods to estimate each team's probability of winning the World Cup. With 1,000 simulations, Spain had the highest estimated championship probability (21.60%), narrowly ahead of Argentina (21.10%). After increasing the simulation to 100,000 iterations, Argentina became the slight favourite (21.52%), with Spain close behind (21.40%). The difference between the two teams was only 0.12 percentage points, indicating that they are effectively evenly matched. The larger simulation produced more stable estimates while consistently identifying Argentina, Spain, France, and England as the tournament's strongest contenders.
-
-### 2. Single-Path Knockout Bracket Prediction (XGBoost)
+### Single-Path Knockout Bracket Prediction (XGBoost)
 ![Ouput](img/model_result.png)
 
 In the deterministic single-bracket forecast, key knockout matchups yielded the following win margins:
@@ -96,6 +89,11 @@ In the deterministic single-bracket forecast, key knockout matchups yielded the 
   * **France (57%)** vs. England (43%)
 * **World Cup Final:**
   * **Spain (52%)** vs. **Argentina (48%)**
+
+#### Monte Carlo Simulation (Championship Probabilities)
+![MonteCarloresult](img/monte_result.png)
+
+The tournament was simulated using Monte Carlo methods to estimate each team's probability of winning the World Cup. With 1,000 simulations, Spain had the highest estimated championship probability (21.60%), narrowly ahead of Argentina (21.10%). After increasing the simulation to 100,000 iterations, Argentina became the slight favourite (21.52%), with Spain close behind (21.40%). The difference between the two teams was only 0.12 percentage points, indicating that they are effectively evenly matched. The larger simulation produced more stable estimates while consistently identifying Argentina, Spain, France, and England as the tournament's strongest contenders.
 
 ### Model Convergence Analysis
 Both the Monte Carlo simulation and XGBoost bracket predictions converge on the same top contenders:
