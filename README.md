@@ -25,11 +25,11 @@ This project leverages machine learning and statistical modeling to simulate the
 
 ## Key Achievements
 
-- XGBoost achieved a ROC-AUC of approximately **0.76**.
-- The model predicted a final between **Spain and Argentina**.
-- Monte Carlo simulation consistently identified **Argentina, Spain, France, and England** as the strongest title contenders.
-- Increasing the simulation from **1,000** to **100,000** iterations produced stable championship probability estimates.
+Identified the most predictive features, with `rank difference` between teams emerging as the strongest individual separator between winning and losing outcomes. Then trained an XGBoost model achieving a test AUC of 0.76, a strong result given football's inherently high unpredictability and frequency of upsets. The model successfully predicted all 4 semifinalists and both finalists, correctly forecasting **Spain's win over Argentina** in the final, matching the actual tournament outcome.
 
+To further validate this result, a Monte Carlo simulation was run using an Elo-style logistic formula derived from each semifinalist's ranking points, testing thousands of possible tournament outcomes rather than a single bracket path. At 1,000 trials, the simulation favored Spain as champion; at 100,000 trials, the result tightened and slightly flipped in Argentina's favor, by a margin of just 0.12 percentage points. This shift illustrates a key property of Monte Carlo simulation: results at low trial counts can be misleading due to sampling noise, and estimates become more statistically reliable as trial count increases.
+
+It's worth noting these two analyses answer slightly different questions: the XGBoost model predicts the outcome of one specific real-world bracket path (which correctly matched Spain's actual win), while the Monte Carlo simulation estimates each team's probability of winning across many possible random tournament outcomes. The two results are not contradictory, Spain and Argentina were essentially a statistical toss-up in the model's eyes, and Spain happening to win the real tournament was a highly plausible outcome even in a world where Argentina held a marginal statistical edge overall.
 
 ## The 48-Team Tournament Structure
 The expanded tournament format significantly alters traditional progression brackets:
